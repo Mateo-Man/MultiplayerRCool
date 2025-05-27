@@ -14,8 +14,17 @@
 
     header img {
       width: 100%;
-      max-height: 400px;
       object-fit: cover;
+    }
+
+    .gradient-title {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      background: linear-gradient(to right, #8ed1b9, #b18ed1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 20px 0;
     }
 
     main {
@@ -48,6 +57,12 @@
       display: block;
     }
 
+    .trailer-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
     .image-pair {
       display: flex;
       justify-content: center;
@@ -71,37 +86,65 @@
     iframe {
       border: none;
     }
+
+    .haru-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .haru-monster {
+      float: left;
+      margin: 0 20px 20px 0;
+      width: 220px;
+    }
+
+    .haru-human {
+      float: right;
+      margin: 20px 0 0 20px;
+      width: 220px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="bokura-header.jpg" alt="All the characters and appearances">
+    <img src="bokura-header.jpg" alt="Game characters (replace with higher resolution full-body version)">
   </header>
+
+  <h1 class="gradient-title">BOKURA</h1>
 
   <main>
 
     <section id="trailer">
       <div class="section-content">
         <h2>Trailer</h2>
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/YcsNfkel8SA" title="Bokura - Official Trailer" allowfullscreen></iframe>
+        <div class="trailer-wrapper">
+          <iframe width="600" height="350" src="https://www.youtube.com/embed/YcsNfkel8SA" title="Bokura - Official Trailer" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <section id="synopsis">
-      <div class="section-content">
+      <div class="section-content clearfix">
         <h2>Synopsis</h2>
+
+        <img class="haru-monster" src="haru-monster.jpg" alt="Monster Haru">
 
         <p>The story starts off with the two, once best friends, riding a train. They talk about current events until they start to reminisce about the fateful winter where they stopped being friends. We travel back to the past as the two boys play Pakemon, while subtly saying their problems at home. The two start talking about the statue in the mountain and decide to go on a journey to break it together. After breaking the statue, the blue kid wants to run away with the green kid. He is hesitant for a second but then agrees.</p>
 
         <p>As they explore through the forest, the two come across a dead animal. After inspecting it, the two pass out. A monster comes up to the boys, looking like it’s inspecting them, then walks off. When the boys wake up, that’s when they are introduced to the two different realities: the green kid sees animals and vibrant colors while the blue kid sees robots and duller tones. They encounter characters who appear differently based on these perspectives.</p>
 
-        <div class="image-pair">
-          <img src="haru-monster.jpg" alt="Monster Haru">
-          <img src="haru-human.jpg" alt="Human Haru">
-        </div>
-
         <p>As they continue, they must make decisions and solve puzzles based on what they each see. Eventually, they encounter a mysterious boy who stands out from both realities. They rest in a cave, then reach the mountaintop again and attempt to destroy the statue with fireworks, which fails. They laugh and pass out again, awakening to see the world as normal.</p>
+
+        <img class="haru-human" src="haru-human.jpg" alt="Human Haru">
 
         <p>The blue kid decides not to run away, and the green kid supports him. They face a final challenge involving a monster and a life-or-death moment, where one saves the other and rescues a swallowed woman. Back on the train, they reflect on what happened, and we learn they drifted apart afterward.</p>
       </div>
@@ -111,9 +154,9 @@
       <div class="section-content">
         <h2>Gameplay</h2>
 
-        <img class="wide-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
-
         <p>The game is a two-player co-op puzzle platformer. The players explore as children and then transition into different perspectives: one sees animals, the other machines. Players must communicate effectively as they interact with different objects and experience cutscenes differently. Their decisions influence later events, and the soundscape changes with each reality.</p>
+
+        <img class="wide-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
 
         <div class="soundtracks">
           <iframe width="400" height="275" src="https://www.youtube.com/embed/O7qANHAUvx4?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Machine | BOKURA Soundtrack" allowfullscreen></iframe>
