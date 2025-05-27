@@ -8,8 +8,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
-      background-color: #f5f5f5;
+      background: linear-gradient(to bottom right, #8ed1b9, #b18ed1); /* green to purple */
+      color: #333;
     }
 
     header img {
@@ -26,6 +26,19 @@
 
     section {
       margin-bottom: 40px;
+    }
+
+    .section-content {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-align: center;
     }
 
     .wide-image {
@@ -69,48 +82,64 @@
   <main>
 
     <section id="trailer">
-      <iframe width="600" height="350" src="https://www.youtube.com/embed/YcsNfkel8SA" title="Bokura - Official Trailer" allowfullscreen></iframe>
+      <div class="section-content">
+        <h2>Trailer</h2>
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/YcsNfkel8SA" title="Bokura - Official Trailer" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section id="synopsis">
-      <p>The story starts off with the two, once best friends, riding a train. They talk about current events until they start to reminisce about the fateful winter where they stopped being friends. We travel back to the past as the two boys play Pakemon, while subtly saying their problems at home. The two start talking about the statue in the mountain and decide to go on a journey to break it together. After breaking the statue, the blue kid wants to run away with the green kid. He is hesitant for a second but then agrees.</p>
+      <div class="section-content">
+        <h2>Synopsis</h2>
 
-      <p>As they explore through the forest, the two come across a dead animal. After inspecting it, the two pass out. A monster comes up to the boys, looking like it’s inspecting them, then walks off. When the boys wake up, that’s when they are introduced to the two different realities: the green kid sees animals and vibrant colors while the blue kid sees robots and duller tones. They encounter characters who appear differently based on these perspectives.</p>
+        <p>The story starts off with the two, once best friends, riding a train. They talk about current events until they start to reminisce about the fateful winter where they stopped being friends. We travel back to the past as the two boys play Pakemon, while subtly saying their problems at home. The two start talking about the statue in the mountain and decide to go on a journey to break it together. After breaking the statue, the blue kid wants to run away with the green kid. He is hesitant for a second but then agrees.</p>
 
-      <div class="image-pair">
-        <img src="haru-monster.jpg" alt="Monster Haru">
-        <img src="haru-human.jpg" alt="Human Haru">
+        <p>As they explore through the forest, the two come across a dead animal. After inspecting it, the two pass out. A monster comes up to the boys, looking like it’s inspecting them, then walks off. When the boys wake up, that’s when they are introduced to the two different realities: the green kid sees animals and vibrant colors while the blue kid sees robots and duller tones. They encounter characters who appear differently based on these perspectives.</p>
+
+        <div class="image-pair">
+          <img src="haru-monster.jpg" alt="Monster Haru">
+          <img src="haru-human.jpg" alt="Human Haru">
+        </div>
+
+        <p>As they continue, they must make decisions and solve puzzles based on what they each see. Eventually, they encounter a mysterious boy who stands out from both realities. They rest in a cave, then reach the mountaintop again and attempt to destroy the statue with fireworks, which fails. They laugh and pass out again, awakening to see the world as normal.</p>
+
+        <p>The blue kid decides not to run away, and the green kid supports him. They face a final challenge involving a monster and a life-or-death moment, where one saves the other and rescues a swallowed woman. Back on the train, they reflect on what happened, and we learn they drifted apart afterward.</p>
       </div>
-
-      <p>As they continue, they must make decisions and solve puzzles based on what they each see. Eventually, they encounter a mysterious boy who stands out from both realities. They rest in a cave, then reach the mountaintop again and attempt to destroy the statue with fireworks, which fails. They laugh and pass out again, awakening to see the world as normal.</p>
-
-      <p>The blue kid decides not to run away, and the green kid supports him. They face a final challenge involving a monster and a life-or-death moment, where one saves the other and rescues a swallowed woman. Back on the train, they reflect on what happened, and we learn they drifted apart afterward.</p>
     </section>
 
     <section id="gameplay">
-      <h2>Gameplay</h2>
-      <img class="wide-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
+      <div class="section-content">
+        <h2>Gameplay</h2>
 
-      <p>The game is a two-player co-op puzzle platformer. The players explore as children and then transition into different perspectives: one sees animals, the other machines. Players must communicate effectively as they interact with different objects and experience cutscenes differently. Their decisions influence later events, and the soundscape changes with each reality.</p>
+        <img class="wide-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
 
-      <div class="soundtracks">
-        <iframe width="400" height="275" src="https://www.youtube.com/embed/O7qANHAUvx4?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Machine | BOKURA Soundtrack" allowfullscreen></iframe>
-        <iframe width="400" height="275" src="https://www.youtube.com/embed/CDipzEYjB2U?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Animal | BOKURA Soundtrack" allowfullscreen></iframe>
+        <p>The game is a two-player co-op puzzle platformer. The players explore as children and then transition into different perspectives: one sees animals, the other machines. Players must communicate effectively as they interact with different objects and experience cutscenes differently. Their decisions influence later events, and the soundscape changes with each reality.</p>
+
+        <div class="soundtracks">
+          <iframe width="400" height="275" src="https://www.youtube.com/embed/O7qANHAUvx4?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Machine | BOKURA Soundtrack" allowfullscreen></iframe>
+          <iframe width="400" height="275" src="https://www.youtube.com/embed/CDipzEYjB2U?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Animal | BOKURA Soundtrack" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <section id="characters">
-      <img class="wide-image" src="two-boys.png" alt="Childhood Friends">
+      <div class="section-content">
+        <h2>Characters</h2>
 
-      <p><strong>Blue Kid (Age 10):</strong> Lives with his mother, who often goes to the bar. Grew up without much money and wishes his parents didn’t fight.</p>
-      <p><strong>Green Kid (Age 10):</strong> Comes from a wealthy family, but his parents ignore him. Thinks all parents argue.</p>
+        <img class="wide-image" src="two-boys.png" alt="Childhood Friends">
 
-      <p>Through their journey, we see how each child processes family and emotional struggles. Their interactions with others reveal deeper layers of their personalities, especially during the campfire dialogue. The game culminates in a resolution that shows how each boy has grown from the experience.</p>
+        <p><strong>Blue Kid (Age 10):</strong> Lives with his mother, who often goes to the bar. Grew up without much money and wishes his parents didn’t fight.</p>
+        <p><strong>Green Kid (Age 10):</strong> Comes from a wealthy family, but his parents ignore him. Thinks all parents argue.</p>
+
+        <p>Through their journey, we see how each child processes family and emotional struggles. Their interactions with others reveal deeper layers of their personalities, especially during the campfire dialogue. The game culminates in a resolution that shows how each boy has grown from the experience.</p>
+      </div>
     </section>
 
     <section id="readings">
-      <h2>Connection to Readings</h2>
-      <p><!-- Add your analysis here about how the game's themes (e.g., perspective, trauma, communication, identity) connect to your course materials. --></p>
+      <div class="section-content">
+        <h2>Connection to Readings</h2>
+        <p><!-- Add your analysis here about how the game's themes (e.g., perspective, trauma, communication, identity) connect to your course materials. --></p>
+      </div>
     </section>
 
   </main>
