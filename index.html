@@ -11,7 +11,6 @@
       color: #333;
     }
 
-    /* FULLSCREEN HEADER IMAGE + FADE */
     .header-container {
       position: relative;
       width: 100%;
@@ -112,7 +111,7 @@
       width: 320px;
     }
 
-    /* GAMEPLAY NEW LAYOUT */
+    /* GAMEPLAY LAYOUT */
     .gameplay-layout {
       display: flex;
       flex-wrap: wrap;
@@ -140,11 +139,46 @@
       max-width: 450px;
       text-align: left;
     }
+
+    .gameplay-right p {
+      margin-bottom: 20px;
+    }
+
+    /* SPOILER TOGGLE */
+    .spoiler-toggle {
+      background: none;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .spoiler-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .spoiler-content.show {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
   </style>
+
+  <script>
+    function toggleSpoiler() {
+      const spoiler = document.getElementById("spoiler");
+      spoiler.classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
 
-  <!-- Fullscreen Header with Fade -->
   <header class="header-container">
     <img src="bokura-header.jpg" alt="Full characters and game title">
     <div class="header-fade"></div>
@@ -171,11 +205,17 @@
 
         <p>The story starts off with the two once best friends riding in separate trains. There is a monologue about their current life and events that have occurred. They start to reminisce about the past and think about the one fateful winter night where the two of them slowly drifted apart. Suddenly, we see the two boys in their childhood days playing Pakèmon. Dialogue is exchanged and they subtly state their problems at home. They then bring up the mayor statue a top the mountain and the green boy decides he wants to blow it up. Following the green boys idea, the blue boy wants to run away after blowing it up far away from where they live. The two agree to the conditions and make plans to do it the next day.</p>
 
-        <p>SPOILER WARNING!</p>
-        
-        <p>As they explore through the forest going up the mountain, they come across a dead deer. The two inspect it and walk away from it. Suddenly, they start to feel sick and pass out near the carcass. A monster comes up to the boys, as if inspecting them, and turns away. Upon waking up, the two starts to see different realities, the green boy sees vibrant visuals where people are animals while the blue boy sees more dull colors and people and items appear as machines. They encounter different characters (Spouses, a hunter, a dog, and Haru) as they traverse through the forest and we learn more about the boys personalities and their viewpoints. While traversing the mountain, they come across a person who looks normal, not a machine or animal like the many others. All three stay the night in a cave by a campfire and talk about friendship and the real reason the blue kid wants to run away.</p>
+        <button class="spoiler-toggle" onclick="toggleSpoiler()">SPOILER WARNING – Click to Reveal</button>
 
-        <p>They wake up and notice the boy Haru is gone. They keep traversing the mountain trying to find Haru and to reach the top of the mountain. The two boys reached the statue and get ready to blow up the statue with the fireworks. Turns out the fireworks they brought couldn’t blow up the statue. After not being able to blow up the statue, the two laugh about the firework and find revelation about their journey. They pass out again for a quick second and wake up. Once they come to, they see the world as normal. The blue kid changed his mind on running away from home and the green boy just followed him to keep him safe. A scream is heard nearby so the boys go and inspect it. They suddenly come across the same creature that inspected them when passed out and see it swallow a woman. They have a life or death situation where one has to live and the other dies. The one who left comes back to save their best friend and drive the monster away while saving the woman who was swallowed. We find ourselves back on the train we started and get the epilogue of what happened upon returning from the mountain. The two drifted apart after some time occurred post running away and the story ends there.</p>
+        <div class="spoiler-content" id="spoiler">
+          <p>As they explore through the forest going up the mountain, they come across a dead deer. The two inspect it and walk away from it. Suddenly, they start to feel sick and pass out near the carcass. A monster comes up to the boys, as if inspecting them, and turns away. Upon waking up, the two starts to see different realities...</p>
+
+          <p>They encounter different characters (Spouses, a hunter, a dog, and Haru) as they traverse through the forest and we learn more about the boys’ personalities and their viewpoints...</p>
+
+          <p>They wake up and notice the boy Haru is gone. They keep traversing the mountain trying to find Haru and to reach the top of the mountain...</p>
+
+          <p>...they see the world as normal. The blue kid changed his mind on running away from home and the green boy just followed him to keep him safe. A scream is heard nearby so the boys go and inspect it...</p>
+        </div>
 
         <img class="haru-human" src="haru-human.jpg" alt="Human Haru">
 
@@ -196,9 +236,11 @@
           </div>
 
           <div class="gameplay-right">
-            <p>BOKURA is described as a two-player co-op puzzle platformer. The players go through puzzles as children and then transition into different realities: one sees animals, the sees other machines. Players must communicate effectively as they traverse through the forest/mountain, each being able to interact with different objects. Big time decisions must be made wich influence later events along the game.</p>
-            <p>What I love about the game is the different soundtracks to each kid. The green side has vibrant colors, so there is a more upbeat soundtrack for what he see. The blue side has a more lax soundtrack with its calming and robust visuals. Each reality has its own sound effects that are made by certain objects.</p>
-            <p>The story is beautifully made and simplistic. We learn more about each kids personality and traits as we progress through the game. There are certain moments in the styory that the players see different dialogue and must converse on which decision is best. What I barely found out is it can be played three times for three different endings to be seen. The puzzles stay the same and players can make different decisions, but the endings still change. It is a neet and nice detail to be added so players have to play the game again for the different ending.</p>
+            <p>BOKURA is described as a two-player co-op puzzle platformer. The players go through puzzles as children and then transition into different realities: one sees animals, the other sees machines.</p>
+            <p>Players must communicate effectively as they traverse through the forest/mountain, each being able to interact with different objects. Big time decisions must be made which influence later events along the game.</p>
+            <p>What I love about the game is the different soundtracks to each kid. The green side has vibrant colors, so there is a more upbeat soundtrack for what he sees. The blue side has a more lax soundtrack with calming and robust visuals.</p>
+            <p>The story is beautifully made and simplistic. We learn more about each kid's personality and traits as we progress. There are certain moments where players see different dialogue and must converse on which decision is best.</p>
+            <p>What I barely found out is it can be played three times for three different endings to be seen. The puzzles stay the same, but the endings change — a neat detail that encourages replaying.</p>
           </div>
         </div>
       </div>
@@ -210,9 +252,9 @@
         <img class="wide-image" src="two-boys.png" alt="Childhood Friends">
 
         <p><strong>Blue Kid (Age 10):</strong> Lives with his mother, who often goes to the bar with her boyfriend. His father is not present in the picture and does not have much money.</p>
-        <p><strong>Green Kid (Age 10):</strong> Comes from a wealthy family, but is ignored by both of the parents. He feels invisible by his parents and argue frequently.</p>
+        <p><strong>Green Kid (Age 10):</strong> Comes from a wealthy family, but is ignored by both parents. He feels invisible and says they argue frequently.</p>
 
-        <p>Through their journey, we see how each child processes family and emotional struggles. Their interactions with the other characters reveal deeper layers of their personalities, such as the campfire dialogue with Haru and with the Father and Mother searching for their kid. Upon inspecting the picture above, we see the way the two kids see their worlds. One steam user notes the way the kids see their different reality is how the kids feels on the inside and their experiences in the real world.</p>
+        <p>Through their journey, we see how each child processes family and emotional struggles. Their interactions with other characters reveal deeper layers of their personalities, such as the campfire dialogue with Haru and the parents searching for their son.</p>
       </div>
     </section>
 
@@ -226,5 +268,4 @@
   </main>
 
 </body>
-
 </html>
