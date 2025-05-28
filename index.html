@@ -11,17 +11,18 @@
       color: #333;
     }
 
+    /* FULLSCREEN HEADER IMAGE + FADE */
     .header-container {
       position: relative;
-      width: calc(100% - 200px);
-      max-width: 1000px;
-      margin: 0 auto;
+      width: 100%;
+      height: 100vh;
       overflow: hidden;
     }
 
     .header-container img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
@@ -29,9 +30,9 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 120px;
       width: 100%;
-      background: linear-gradient(to bottom, rgba(255,255,255,0), #8ed1b9 30%, #b18ed1 100%);
+      height: 150px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #8ed1b9 40%, #b18ed1);
       pointer-events: none;
     }
 
@@ -47,7 +48,7 @@
 
     main {
       padding: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
@@ -68,6 +69,12 @@
       text-align: center;
     }
 
+    .trailer-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
     .wide-image {
       width: 100%;
       max-width: 700px;
@@ -75,10 +82,8 @@
       display: block;
     }
 
-    .trailer-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
+    iframe {
+      border: none;
     }
 
     .soundtracks {
@@ -86,10 +91,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-    }
-
-    iframe {
-      border: none;
+      margin-top: 20px;
     }
 
     .clearfix::after {
@@ -110,35 +112,41 @@
       width: 320px;
     }
 
+    /* GAMEPLAY NEW LAYOUT */
     .gameplay-layout {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
       gap: 30px;
-      margin-bottom: 30px;
+      justify-content: center;
+      align-items: flex-start;
     }
 
-    .gameplay-image {
-      max-width: 350px;
+    .gameplay-left {
+      flex: 1;
+      min-width: 300px;
+      max-width: 480px;
+    }
+
+    .gameplay-left img {
       width: 100%;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .gameplay-text {
+    .gameplay-right {
       flex: 1;
       min-width: 300px;
-      max-width: 500px;
+      max-width: 450px;
       text-align: left;
     }
   </style>
 </head>
 <body>
 
+  <!-- Fullscreen Header with Fade -->
   <header class="header-container">
-    <img src="bokura-header.jpg" alt="Game characters (replace with higher resolution full-body version)">
+    <img src="bokura-header.jpg" alt="Full characters and game title">
     <div class="header-fade"></div>
   </header>
 
@@ -178,15 +186,17 @@
         <h2>Gameplay</h2>
 
         <div class="gameplay-layout">
-          <img class="gameplay-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
-          <div class="gameplay-text">
+          <div class="gameplay-left">
+            <img src="different-perspectives.jpg" alt="Different Perspectives">
+            <div class="soundtracks">
+              <iframe width="400" height="275" src="https://www.youtube.com/embed/O7qANHAUvx4?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Machine | BOKURA Soundtrack" allowfullscreen></iframe>
+              <iframe width="400" height="275" src="https://www.youtube.com/embed/CDipzEYjB2U?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Animal | BOKURA Soundtrack" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="gameplay-right">
             <p>The game is a two-player co-op puzzle platformer. The players explore as children and then transition into different perspectives: one sees animals, the other machines. Players must communicate effectively as they interact with different objects and experience cutscenes differently. Their decisions influence later events, and the soundscape changes with each reality.</p>
           </div>
-        </div>
-
-        <div class="soundtracks">
-          <iframe width="400" height="275" src="https://www.youtube.com/embed/O7qANHAUvx4?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Machine | BOKURA Soundtrack" allowfullscreen></iframe>
-          <iframe width="400" height="275" src="https://www.youtube.com/embed/CDipzEYjB2U?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Animal | BOKURA Soundtrack" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -194,7 +204,6 @@
     <section id="characters">
       <div class="section-content">
         <h2>Characters</h2>
-
         <img class="wide-image" src="two-boys.png" alt="Childhood Friends">
 
         <p><strong>Blue Kid (Age 10):</strong> Lives with his mother, who often goes to the bar. Grew up without much money and wishes his parents didn’t fight.</p>
@@ -207,7 +216,7 @@
     <section id="readings">
       <div class="section-content">
         <h2>Connection to Readings</h2>
-        <p><!-- Add your analysis here about how the game's themes (e.g., perspective, trauma, communication, identity) connect to your course materials. --></p>
+        <p><!-- Add your analysis here about how the game's themes connect to your course materials. --></p>
       </div>
     </section>
 
