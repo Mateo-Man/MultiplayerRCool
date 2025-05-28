@@ -1,3 +1,4 @@
+<html>
 <head>
   <meta charset="UTF-8">
   <title>BOKURA</title>
@@ -110,19 +111,6 @@
       width: 380px;
     }
 
-    .gameplay-image-inline {
-      float: left;
-      margin: 0 20px 20px 0;
-      width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .gameplay-text p {
-      margin-bottom: 28px;
-      line-height: 1.6;
-    }
-
     .spoiler-toggle {
       background: none;
       color: black;
@@ -145,6 +133,37 @@
     @keyframes fadeIn {
       from { opacity: 0; }
       to   { opacity: 1; }
+    }
+
+    /* GAMEPLAY FLEX LAYOUT */
+    .gameplay-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .gameplay-left {
+      flex: 0 0 300px;
+    }
+
+    .gameplay-left img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .gameplay-right {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+
+    .gameplay-right p {
+      margin-bottom: 28px;
+      line-height: 1.6;
     }
   </style>
 
@@ -201,15 +220,20 @@
       <div class="section-content">
         <h2>Gameplay</h2>
 
-        <div class="gameplay-text">
-          <p>BOKURA is described as a two-player co-op puzzle platformer. The players go through puzzles as children and then transition into different realities: one sees animals, the other sees machines. Players must communicate effectively as they traverse through the forest/mountain, each being able to interact with different objects. Big time decisions must be made which influence later events along the game.</p>
+        <div class="gameplay-layout">
+          <!-- Left Column: Image beside text -->
+          <div class="gameplay-left">
+            <img src="different-perspectives.jpg" alt="Different Perspectives">
+          </div>
 
-          <p>
-            <img src="different-perspectives.jpg" alt="Different Perspectives" class="gameplay-image-inline">
-            What I love about the game is the different soundtracks to each kid. The green side has vibrant colors, so there is a more upbeat soundtrack for what he sees. The blue side has a more lax soundtrack with its calming and robust visuals. Each reality has its own sound effects that are made by certain objects.
-          </p>
+          <!-- Right Column: All 3 paragraphs -->
+          <div class="gameplay-right">
+            <p>BOKURA is described as a two-player co-op puzzle platformer. The players go through puzzles as children and then transition into different realities: one sees animals, the other sees machines. Players must communicate effectively as they traverse through the forest/mountain, each being able to interact with different objects. Big time decisions must be made which influence later events along the game.</p>
 
-          <p>The story is beautifully made and simplistic. We learn more about each kid’s personality and traits as we progress through the game. There are certain moments in the story where players see different dialogue and must converse on which decision is best. What I barely found out is it can be played three times for three different endings to be seen. The puzzles stay the same and players can make different decisions, but the endings still change. It is a neat and nice detail that encourages players to experience the game multiple times.</p>
+            <p>What I love about the game is the different soundtracks to each kid. The green side has vibrant colors, so there is a more upbeat soundtrack for what he sees. The blue side has a more lax soundtrack with its calming and robust visuals. Each reality has its own sound effects that are made by certain objects.</p>
+
+            <p>The story is beautifully made and simplistic. We learn more about each kid’s personality and traits as we progress through the game. There are certain moments in the story where players see different dialogue and must converse on which decision is best. What I barely found out is it can be played three times for three different endings to be seen. The puzzles stay the same and players can make different decisions, but the endings still change. It is a neat and nice detail that encourages players to experience the game multiple times.</p>
+          </div>
         </div>
 
         <div class="soundtracks-below">
@@ -218,7 +242,7 @@
         </div>
       </div>
     </section>
-
+    
     <section id="characters">
       <div class="section-content">
         <h2>Characters</h2>
@@ -241,3 +265,5 @@
   </main>
 
 </body>
+
+</html>
