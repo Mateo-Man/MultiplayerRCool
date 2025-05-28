@@ -1,5 +1,5 @@
 <html>
- <head>
+<head>
   <meta charset="UTF-8">
   <title>BOKURA</title>
   <style>
@@ -11,12 +11,28 @@
       color: #333;
     }
 
-    header img {
+    .header-container {
+      position: relative;
       width: calc(100% - 200px);
       max-width: 1000px;
-      display: block;
       margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .header-container img {
+      width: 100%;
       height: auto;
+      display: block;
+    }
+
+    .header-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 120px;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), #8ed1b9 30%, #b18ed1 100%);
+      pointer-events: none;
     }
 
     .gradient-title {
@@ -93,12 +109,37 @@
       margin: 20px 0 0 20px;
       width: 320px;
     }
+
+    .gameplay-layout {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .gameplay-image {
+      max-width: 350px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .gameplay-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <header class="header-container">
     <img src="bokura-header.jpg" alt="Game characters (replace with higher resolution full-body version)">
+    <div class="header-fade"></div>
   </header>
 
   <h1 class="gradient-title">BOKURA</h1>
@@ -136,9 +177,12 @@
       <div class="section-content">
         <h2>Gameplay</h2>
 
-        <p>The game is a two-player co-op puzzle platformer. The players explore as children and then transition into different perspectives: one sees animals, the other machines. Players must communicate effectively as they interact with different objects and experience cutscenes differently. Their decisions influence later events, and the soundscape changes with each reality.</p>
-
-        <img class="wide-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
+        <div class="gameplay-layout">
+          <img class="gameplay-image" src="different-perspectives.jpg" alt="Dead Dog/Broken Robot">
+          <div class="gameplay-text">
+            <p>The game is a two-player co-op puzzle platformer. The players explore as children and then transition into different perspectives: one sees animals, the other machines. Players must communicate effectively as they interact with different objects and experience cutscenes differently. Their decisions influence later events, and the soundscape changes with each reality.</p>
+          </div>
+        </div>
 
         <div class="soundtracks">
           <iframe width="400" height="275" src="https://www.youtube.com/embed/O7qANHAUvx4?list=PLnBTVpZ2fiWdXj16jB5Jx-Bc8MDHrP8l2" title="003_Machine | BOKURA Soundtrack" allowfullscreen></iframe>
